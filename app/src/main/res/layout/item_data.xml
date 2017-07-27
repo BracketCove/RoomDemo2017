@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Copyright (C) 2017 Ryan Kay Open Source Project
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *
+  ~  *      http://www.apache.org/licenses/LICENSE-2.0
+  ~  *
+  ~  * Unless required by applicable law or agreed to in writing, software
+  ~  * distributed under the License is distributed on an "AS IS" BASIS,
+  ~  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  * See the License for the specific language governing permissions and
+  ~  * limitations under the License.
+  ~  */
+  -->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:id="@+id/root_list_item"
+    android:background="?android:attr/selectableItemBackground"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imv_list_item_circle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:alpha=".86"
+        tools:src="@drawable/blue_drawable"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp" />
+
+    <ImageView
+        android:id="@+id/imv_date_and_time"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_event_white_24dp"
+        android:alpha=".86"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginStart="80dp" />
+
+    <TextView
+        style="@style/Text.Primary"
+        android:id="@+id/lbl_message"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="If at first something doesn't make any sense, find another explanation."
+        android:layout_marginLeft="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        style="@style/Text.Secondary"
+        android:id="@+id/lbl_date_and_time"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        tools:text="6:30AM 06/01/2017"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="112dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginStart="112dp" />
+
+    <ProgressBar
+        android:id="@+id/pro_item_data"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp" />
+
+</android.support.constraint.ConstraintLayout>

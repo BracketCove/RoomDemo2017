@@ -1,0 +1,52 @@
+<!--
+  ~ /**
+  ~  * Copyright (C) 2017 Ryan Kay Open Source Project
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *
+  ~  *      http://www.apache.org/licenses/LICENSE-2.0
+  ~  *
+  ~  * Unless required by applicable law or agreed to in writing, software
+  ~  * distributed under the License is distributed on an "AS IS" BASIS,
+  ~  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  * See the License for the specific language governing permissions and
+  ~  * limitations under the License.
+  ~  */
+  -->
+
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorWindowBackground</item>
+    </style>
+
+
+    <!-- 9. Since some of our Views have attributes which are common, we can pull those common
+    attributes into their own styles. This way if I want to make the same Visual Changes to multiple
+    Views, I only need to change the Attribute in one spot. This also reduces the lines in your XML
+    Layouts, which is always a bonus -->
+
+    <style name="Text">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Text.Primary">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Text.Secondary">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+
+
+</resources>

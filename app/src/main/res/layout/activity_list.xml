@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Copyright (C) 2017 Ryan Kay Open Source Project
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *
+  ~  *      http://www.apache.org/licenses/LICENSE-2.0
+  ~  *
+  ~  * Unless required by applicable law or agreed to in writing, software
+  ~  * distributed under the License is distributed on an "AS IS" BASIS,
+  ~  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  * See the License for the specific language governing permissions and
+  ~  * limitations under the License.
+  ~  */
+  -->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_list_activity"
+    tools:context="forgettery.wiseass.com.recyclerviewprebuilt.view.ListActivity">
+
+    <!--7. If you wish, you can specify a LayoutManager in XML instead of Java. Mostly a matter
+    of preference, but since the LayoutManager isn't a View/Layout, I prefer to do that in Java.
+    -->
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tlb_list_activity"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_create_new_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:elevation="6dp"
+        app:rippleColor="@color/colorTransparentBlack"
+        android:src="@drawable/ic_add_black_24dp"
+
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="16dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec_list_activity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/tlb_list_activity" />
+
+</android.support.constraint.ConstraintLayout>
