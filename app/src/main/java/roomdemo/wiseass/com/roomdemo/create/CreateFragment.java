@@ -16,29 +16,33 @@
  *
  */
 
+package roomdemo.wiseass.com.roomdemo.create;
 
 
-package roomdemo.wiseass.com.roomdemo.view;
-
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
-import java.util.List;
+import roomdemo.wiseass.com.roomdemo.R;
 
-import roomdemo.wiseass.com.roomdemo.data.ListItem;
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class CreateFragment extends Fragment {
 
 
+    public CreateFragment() {
+        // Required empty public constructor
+    }
 
-public interface ViewInterface {
 
-    void startDetailActivity(String dateAndTime, String message, int colorResource, View viewRoot);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_create, container, false);
+    }
 
-    void setUpAdapterAndView(List<ListItem> listOfData);
-
-    void addNewListItemToView(ListItem newItem);
-
-    void deleteListItemAt(int position);
-
-    void showUndoSnackbar();
-
-    void insertListItemAt(int temporaryListItemPosition, ListItem temporaryListItem);
 }

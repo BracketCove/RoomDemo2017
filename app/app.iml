@@ -8,11 +8,11 @@
     </facet>
     <facet type="android" name="Android">
       <configuration>
-        <option name="SELECTED_BUILD_VARIANT" value="debug" />
-        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
-        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />
+        <option name="SELECTED_BUILD_VARIANT" value="mockDebug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleMockDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileMockDebugSources" />
         <afterSyncTasks>
-          <task>generateDebugSources</task>
+          <task>generateMockDebugSources</task>
         </afterSyncTasks>
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
@@ -23,24 +23,59 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
-    <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
-    <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/debug" />
+    <output url="file://$MODULE_DIR$/build/intermediates/classes/mock/debug" />
+    <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/mock/debug" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/debug" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/debug" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/debug" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/mock/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/mock/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/mock/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/mock/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/mock/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/mock/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/mock/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mockDebug/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mockDebug/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mockDebug/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mockDebug/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mockDebug/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mockDebug/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mockDebug/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/mock/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/mock/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/mock/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/mock/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/mock/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/mock/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/mock/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMockDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMockDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMockDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMockDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMockDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMockDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMockDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mock/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mock/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mock/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mock/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mock/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mock/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mock/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMock/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMock/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMock/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMock/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMock/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMock/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testMock/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestMock/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestMock/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestMock/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestMock/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestMock/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestMock/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestMock/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
@@ -87,10 +122,14 @@
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
-    <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" scope="TEST" name="byte-buddy-1.6.14" level="project" />
+    <orderEntry type="library" exported="" name="common-1.0.0-alpha5" level="project" />
+    <orderEntry type="library" exported="" name="1_common-1.0.0-alpha5" level="project" />
+    <orderEntry type="library" exported="" name="2_common-1.0.0-alpha5" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="runner-0.5" level="project" />
+    <orderEntry type="library" exported="" name="extensions-1.0.0-alpha5" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="espresso-idling-resource-2.2.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="byte-buddy-agent-1.6.14" level="project" />
     <orderEntry type="library" exported="" name="constraint-layout-1.0.2" level="project" />
@@ -98,18 +137,23 @@
     <orderEntry type="library" exported="" name="transition-25.3.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-integration-1.3" level="project" />
     <orderEntry type="library" exported="" name="design-25.3.1" level="project" />
+    <orderEntry type="library" exported="" name="support-db-impl-1.0.0-alpha5" level="project" />
     <orderEntry type="library" exported="" name="support-core-ui-25.3.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="objenesis-2.5" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="jsr305-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="support-core-utils-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-fragment-25.3.1" level="project" />
+    <orderEntry type="library" exported="" name="ViewPagerIndicator-2.4.1" level="project" />
+    <orderEntry type="library" exported="" name="support-db-1.0.0-alpha5" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="espresso-core-2.2.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="exposed-instrumentation-api-publish-0.5" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="rules-0.5" level="project" />
     <orderEntry type="library" exported="" name="constraint-layout-solver-1.0.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="javax.annotation-api-1.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="javax.inject-1" level="project" />
-    <orderEntry type="library" exported="" name="circleimageview-2.1.0" level="project" />
+    <orderEntry type="library" exported="" name="runtime-1.0.0-alpha5" level="project" />
+    <orderEntry type="library" exported="" name="1_runtime-1.0.0-alpha5" level="project" />
+    <orderEntry type="library" exported="" name="2_runtime-1.0.0-alpha5" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="mockito-core-2.8.9" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="javawriter-2.1.1" level="project" />
     <orderEntry type="library" exported="" name="support-v4-25.3.1" level="project" />
@@ -122,6 +166,6 @@
     <orderEntry type="library" exported="" name="support-vector-drawable-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-compat-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="animated-vector-drawable-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="android-android-26" level="project" />
+    <orderEntry type="library" exported="" name="android-android-25" level="project" />
   </component>
 </module>

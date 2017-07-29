@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="2_common-1.0.0-alpha5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0-alpha5/16bbceb3231045909d9b2d19758c57a30831ce9f/common-1.0.0-alpha5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0-alpha5/b0f6483b3e91805d566d3bfe6b1ce9edb3a7ca35/common-1.0.0-alpha5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -27,10 +27,11 @@
     android:background="?android:attr/selectableItemBackground"
     >
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/imv_list_item_circle"
         android:layout_width="48dp"
         android:layout_height="48dp"
+        android:scaleType="center"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"

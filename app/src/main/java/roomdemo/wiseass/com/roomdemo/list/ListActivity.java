@@ -16,7 +16,7 @@
  *
  */
 
-package roomdemo.wiseass.com.roomdemo.view;
+package roomdemo.wiseass.com.roomdemo.list;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -46,7 +46,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import roomdemo.wiseass.com.roomdemo.R;
 import roomdemo.wiseass.com.roomdemo.data.FakeDataSource;
 import roomdemo.wiseass.com.roomdemo.data.ListItem;
-import roomdemo.wiseass.com.roomdemo.logic.Controller;
+import roomdemo.wiseass.com.roomdemo.detail.DetailActivity;
 
 
 /**
@@ -59,7 +59,7 @@ import roomdemo.wiseass.com.roomdemo.logic.Controller;
  * One doesn't sharpen a knife by rubbing the blade against butter.
  *
  */
-public class ListActivity extends AppCompatActivity implements ViewInterface, View.OnClickListener {
+public class ListActivity extends AppCompatActivity implements ListContract, View.OnClickListener {
 
     private static final String EXTRA_DATE_AND_TIME = "EXTRA_DATE_AND_TIME";
     private static final String EXTRA_MESSAGE = "EXTRA_MESSAGE";
@@ -72,7 +72,7 @@ public class ListActivity extends AppCompatActivity implements ViewInterface, Vi
     private CustomAdapter adapter;
     private Toolbar toolbar;
 
-    private Controller controller;
+    private ListPresenter listPresenter;
 
 
     @Override
@@ -92,12 +92,12 @@ public class ListActivity extends AppCompatActivity implements ViewInterface, Vi
 
         fabulous.setOnClickListener(this);
 
-        controller = new Controller(this, new FakeDataSource());
+        listPresenter = new ListPresenter(this, new FakeDataSource());
     }
 
     @Override
     public void startDetailActivity(String dateAndTime, String message, int colorResource, View viewRoot) {
-        Intent i = new Intent(this, roomdemo.wiseass.com.roomdemo.view.DetailActivity.class);
+        Intent i = new Intent(this, DetailActivity.class);
         i.putExtra(EXTRA_DATE_AND_TIME, dateAndTime);
         i.putExtra(EXTRA_MESSAGE, message);
         i.putExtra(EXTRA_DRAWABLE, colorResource);
@@ -183,7 +183,7 @@ public class ListActivity extends AppCompatActivity implements ViewInterface, Vi
                 .setAction(R.string.action_undo, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        controller.onUndoConfirmed();
+                        listPresenter.onUndoConfirmed();
                     }
                 })
                 .addCallback(new BaseTransientBottomBar.BaseCallback<Snackbar>() {
@@ -191,7 +191,7 @@ public class ListActivity extends AppCompatActivity implements ViewInterface, Vi
                     public void onDismissed(Snackbar transientBottomBar, int event) {
                         super.onDismissed(transientBottomBar, event);
 
-                        controller.onSnackbarTimeout();
+                        listPresenter.onSnackbarTimeout();
                     }
                 })
                 .show();
@@ -209,7 +209,7 @@ public class ListActivity extends AppCompatActivity implements ViewInterface, Vi
         int viewId = v.getId();
         if (viewId == R.id.fab_create_new_item) {
             //User wishes to creat a new RecyclerView Item
-            controller.createNewListItem();
+            listPresenter.createNewListItem();
         }
     }
 
@@ -283,7 +283,7 @@ public class ListActivity extends AppCompatActivity implements ViewInterface, Vi
                         this.getAdapterPosition()
                 );
 
-                controller.onListItemClick(
+                listPresenter.onListItemClick(
                         listItem,
                         v
                 );
@@ -312,7 +312,7 @@ public class ListActivity extends AppCompatActivity implements ViewInterface, Vi
             @Override
             public void onSwiped(final RecyclerView.ViewHolder viewHolder, int swipeDir) {
                 int position = viewHolder.getAdapterPosition();
-                controller.onListItemSwiped(
+                listPresenter.onListItemSwiped(
                         position,
                         listOfData.get(position)
                 );

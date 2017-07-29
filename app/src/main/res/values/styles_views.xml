@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
   ~  * Copyright (C) 2017 Ryan Kay Open Source Project
@@ -17,16 +18,18 @@
   -->
 
 <resources>
-    <string name="app_name">RoomDemo</string>
-    <string name="action_delete_item">Item Deleted</string>
-    <string name="action_undo">UNDO?</string>
 
-    <!-- used as tags for shared element transitions -->
-    <string name="transition_drawable">drawable</string>
-    <string name="transition_message">message</string>
-    <string name="transition_time_and_date">date</string>
-    <string name="title_toolbar">List Activity</string>
+    <style name="ImageButtonToolbar" parent="Base.Widget.AppCompat.ImageButton">
+        <item name="android:padding">16dp</item>
+        <item name="background">?android:attr/selectableItemBackground</item>
+    </style>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <style name="EditTextCreateMessage" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:padding">16dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:inputType">textCapSentences</item>
+        <item name="android:gravity">left|top</item>
+
+    </style>
 </resources>

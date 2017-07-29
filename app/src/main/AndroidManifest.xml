@@ -27,7 +27,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.ListActivity">
+        <activity android:name=".list.ListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,9 +35,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".view.DetailActivity">
+        <activity android:name=".detail.DetailActivity"/>
+        <activity android:name=".create.CreateActivity"/>
 
-        </activity>
     </application>
 
 </manifest>

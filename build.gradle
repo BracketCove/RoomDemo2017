@@ -15,9 +15,24 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+
+        maven {
+            url "https://maven.google.com"
+        }
+
+        //VPI
+        maven { url "https://jitpack.io" }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext {
+    //android
+    supportLibraryVersion = '25.3.1'
+    constraintLayoutVersion = '1.0.2'
+    archLifecycleVersion = '1.0.0-alpha5'
+    viewPagerIndicatorVersion = '2.4.1'
 }

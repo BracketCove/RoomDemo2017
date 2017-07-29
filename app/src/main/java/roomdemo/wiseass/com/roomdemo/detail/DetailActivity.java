@@ -16,7 +16,7 @@
  *
  */
 
-package roomdemo.wiseass.com.roomdemo.view;
+package roomdemo.wiseass.com.roomdemo.detail;
 
 import android.content.Intent;
 import android.os.Bundle;

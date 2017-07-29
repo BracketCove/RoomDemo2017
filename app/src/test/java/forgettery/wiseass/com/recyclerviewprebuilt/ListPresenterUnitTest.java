@@ -33,8 +33,8 @@ import java.util.List;
 import roomdemo.wiseass.com.roomdemo.R;
 import roomdemo.wiseass.com.roomdemo.data.DataSourceInterface;
 import roomdemo.wiseass.com.roomdemo.data.ListItem;
-import roomdemo.wiseass.com.roomdemo.logic.Controller;
-import roomdemo.wiseass.com.roomdemo.view.ViewInterface;
+import roomdemo.wiseass.com.roomdemo.list.ListPresenter;
+import roomdemo.wiseass.com.roomdemo.list.ListContract;
 
 
 /**
@@ -47,7 +47,7 @@ import roomdemo.wiseass.com.roomdemo.view.ViewInterface;
  * I have some Videos on this topic on my youtube channel. Check them out for more info.
  */
 @RunWith(MockitoJUnitRunner.class)
-public class ControllerUnitTest {
+public class ListPresenterUnitTest {
 
     //We technically could've just used the FakeDataSource here, but you don't always want to use
     //Mocks over Fakes and vice versa. Depends on your use case.
@@ -55,7 +55,7 @@ public class ControllerUnitTest {
     DataSourceInterface dataSource;
 
     @Mock
-    ViewInterface view;
+    ListContract view;
 
     @Mock
     View testViewRoot;
@@ -68,11 +68,11 @@ public class ControllerUnitTest {
 
     private static final int POSITION = 3;
 
-    Controller controller;
+    ListPresenter listPresenter;
 
     @Before
     public void setUpTest() {
-        controller = new Controller(view, dataSource);
+        listPresenter = new ListPresenter(view, dataSource);
     }
 
     @Test
@@ -82,13 +82,13 @@ public class ControllerUnitTest {
         listOfData.add(TEST_ITEM);
 
 
-        //This is where we tell our "Mocks" what to do when our Controller talks to them. Since they
+        //This is where we tell our "Mocks" what to do when our ListPresenter talks to them. Since they
         //aren't real objects, we must tell them exactly what to do if we want responses from them.
         Mockito.when(dataSource.getListOfData())
                 .thenReturn(listOfData);
 
         //This is the method we are testing
-        controller.getListFromDataSource();
+        listPresenter.getListFromDataSource();
 
         //Check how the Tested Class responds to the data it receives
         //or test it's behaviour
@@ -99,7 +99,7 @@ public class ControllerUnitTest {
 
     @Test
     public void onListItemClicked() {
-        controller.onListItemClick(TEST_ITEM, testViewRoot);
+        listPresenter.onListItemClick(TEST_ITEM, testViewRoot);
 
         Mockito.verify(view).startDetailActivity(
                 TEST_ITEM.getDateAndTime(),
@@ -114,8 +114,8 @@ public class ControllerUnitTest {
         Mockito.when(dataSource.createNewListItem())
                 .thenReturn(TEST_ITEM);
 
-        //2 Call the method you wish to test on the Controller
-        controller.createNewListItem();
+        //2 Call the method you wish to test on the ListPresenter
+        listPresenter.createNewListItem();
 
         //3 Verify the behaviour of the View, based on the event
         Mockito.verify(view).addNewListItemToView(
@@ -126,7 +126,7 @@ public class ControllerUnitTest {
     @Test
     public void onListItemSwiped() {
 
-        controller.onListItemSwiped(POSITION, TEST_ITEM);
+        listPresenter.onListItemSwiped(POSITION, TEST_ITEM);
 
         //ensure consistency between View and Data Layers
         Mockito.verify(dataSource).deleteListItem(TEST_ITEM);
@@ -143,10 +143,10 @@ public class ControllerUnitTest {
                 .thenReturn(TEST_ITEM);
 
         //this test requires temporary position and item to be set. We can achieve this by calling
-        //controller.onListItemSwiped() first.
-        controller.onListItemSwiped(POSITION, TEST_ITEM);
+        //listPresenter.onListItemSwiped() first.
+        listPresenter.onListItemSwiped(POSITION, TEST_ITEM);
 
-        controller.onUndoConfirmed();
+        listPresenter.onUndoConfirmed();
 
         Mockito.verify(dataSource).insertListItem(TEST_ITEM);
 
@@ -158,9 +158,9 @@ public class ControllerUnitTest {
 
     @Test
     public void onSnackbarTimeout() {
-        controller.onListItemSwiped(POSITION, TEST_ITEM);
+        listPresenter.onListItemSwiped(POSITION, TEST_ITEM);
 
-        controller.onSnackbarTimeout();
+        listPresenter.onSnackbarTimeout();
     }
 
 

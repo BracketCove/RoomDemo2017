@@ -1,0 +1,110 @@
+<!--
+  ~ /**
+  ~  * Copyright (C) 2017 Ryan Kay Open Source Project
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *
+  ~  *      http://www.apache.org/licenses/LICENSE-2.0
+  ~  *
+  ~  * Unless required by applicable law or agreed to in writing, software
+  ~  * distributed under the License is distributed on an "AS IS" BASIS,
+  ~  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  * See the License for the specific language governing permissions and
+  ~  * limitations under the License.
+  ~  */
+  -->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="roomdemo.wiseass.com.roomdemo.create.CreateFragment">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_create_drawable"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/div_center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/vpi_create_drawable"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/div_center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="0dp" />
+
+
+    <FrameLayout
+        android:id="@+id/cont_create_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/colorTransparentBlack"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp">
+
+        <ImageButton
+            android:id="@+id/imb_create_back"
+            style="@style/ImageButtonToolbar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="left"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            />
+
+        <ImageButton
+            android:id="@+id/imb_create_done"
+            style="@style/ImageButtonToolbar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_done_white_24dp"
+            android:layout_gravity="right"
+             />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/div_center"
+        style="@style/Text.Primary"
+        android:layout_width="368dp"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <EditText
+        android:id="@+id/edt_create_message"
+        style="@style/EditTextCreateMessage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/div_center"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Check out content like Fragmented Podcast to expose yourself to the knowledge,
+        ideas, and opinions of experts in your field" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,17 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "roomdemo.wiseass.com.roomdemo"
         minSdkVersion 16
-        targetSdkVersion 26
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled true
@@ -20,35 +19,51 @@ android {
 
         debug {
             minifyEnabled false
-
-
         }
     }
 
     productFlavors {
+        prod {
 
+        }
+        mock {
+            applicationIdSuffix '.mock'
+        }
+    }
 
+    android.variantFilter { variant ->
+        if (variant.buildType.name.equals('release')
+                && variant.getFlavors().get(0).name.equals('mock')) {
+            variant.setIgnore(true);
+        }
+    }
 
+    testOptions.unitTests.all {
+        testLogging {
+            events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+        }
     }
 
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    //instead of check Project level build.gradle for version values
+    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleVersion"
+    compile "android.arch.persistence.room:runtime:$rootProject.archLifecycleVersion"
+    compile "android.arch.lifecycle:runtime:$rootProject.archLifecycleVersion"
+    compile "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
 
-    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
+    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
 
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:design:25.3.1'
-
-    /*
-    https://github.com/hdodenhof/CircleImageView
-     */
-    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile "com.github.JakeWharton:ViewPagerIndicator:$rootProject.viewPagerIndicatorVersion"
 
     testCompile 'org.mockito:mockito-core:2.8.9'
     testCompile 'junit:junit:4.12'
