@@ -16,17 +16,17 @@
  *
  */
 
-package roomdemo.wiseass.com.roomdemo.data;
+package roomdemo.wiseass.com.roomdemo.util;
 
-import java.util.List;
+import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
-public interface DataSourceInterface {
+import javax.inject.Scope;
 
-    List<ListItem> getListOfData();
 
-    ListItem createNewListItem();
-
-    void deleteListItem(ListItem listItem);
-
-    void insertListItem(ListItem temporaryListItem);
+@Documented
+@Scope
+@Retention(RetentionPolicy.RUNTIME)
+public @interface FragmentScoped {
 }

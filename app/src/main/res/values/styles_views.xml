@@ -21,14 +21,15 @@
 
     <style name="ImageButtonToolbar" parent="Base.Widget.AppCompat.ImageButton">
         <item name="android:padding">16dp</item>
-        <item name="background">?android:attr/selectableItemBackground</item>
+        <item name="background">?attr/selectableItemBackground</item>
+
     </style>
 
     <style name="EditTextCreateMessage" parent="Base.Widget.AppCompat.EditText">
         <item name="android:padding">16dp</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:inputType">textCapSentences</item>
+        <item name="android:inputType">textCapSentences|textMultiLine</item>
         <item name="android:gravity">left|top</item>
 
     </style>

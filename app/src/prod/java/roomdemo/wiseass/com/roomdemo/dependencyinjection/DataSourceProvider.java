@@ -16,36 +16,14 @@
  *
  */
 
+package roomdemo.wiseass.com.roomdemo.dependencyinjection;
 
+/**
+ * Created by R_KAY on 7/31/2017.
+ */
 
-package roomdemo.wiseass.com.roomdemo.create;
+public class DataSourceProvider {
 
-import java.util.List;
-
-import roomdemo.wiseass.com.roomdemo.data.ListItem;
-
-
-public interface CreateContract {
-
-    interface View {
-
-        void startDetailActivity(String dateAndTime, String message, int colorResource, View viewRoot);
-
-        void setUpAdapterAndView(List<ListItem> listOfData);
-
-        void addNewListItemToView(ListItem newItem);
-
-        void deleteListItemAt(int position);
-
-        void showUndoSnackbar();
-
-        void insertListItemAt(int temporaryListItemPosition, ListItem temporaryListItem);
-
-    }
-
-    interface Presenter {
-
-    }
-
+   // public ListItemRepository provideDataSource();
 
 }

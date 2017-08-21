@@ -16,38 +16,33 @@
  *
  */
 
+package roomdemo.wiseass.com.roomdemo.viewmodel;
 
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.ViewModel;
+import android.os.AsyncTask;
 
-package roomdemo.wiseass.com.roomdemo.detail;
-
-import java.util.List;
+import javax.inject.Inject;
 
 import roomdemo.wiseass.com.roomdemo.data.ListItem;
+import roomdemo.wiseass.com.roomdemo.data.ListItemRepository;
 
 /**
- * Describes interactions between View and Presenter within Detail Feature.
+ * Created by R_KAY on 8/3/2017.
  */
-public interface DetailContract {
 
-    interface View {
+public class ListItemViewModel extends ViewModel {
 
-        void startDetailActivity(String dateAndTime, String message, int colorResource, View viewRoot);
+    private ListItemRepository repository;
 
-        void setUpAdapterAndView(List<ListItem> listOfData);
-
-        void addNewListItemToView(ListItem newItem);
-
-        void deleteListItemAt(int position);
-
-        void showUndoSnackbar();
-
-        void insertListItemAt(int temporaryListItemPosition, ListItem temporaryListItem);
-
+    @Inject
+    ListItemViewModel(ListItemRepository repository) {
+        this.repository = repository;
     }
 
-    interface Presenter {
-
+    public LiveData<ListItem> getListItemById(String itemId){
+       return repository.getListItem(itemId);
     }
-
 
 }
+

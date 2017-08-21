@@ -20,47 +20,47 @@ package roomdemo.wiseass.com.roomdemo.create;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.viewpagerindicator.CirclePageIndicator;
+
 import roomdemo.wiseass.com.roomdemo.R;
+import roomdemo.wiseass.com.roomdemo.list.ListFragment;
+import roomdemo.wiseass.com.roomdemo.util.BaseActivity;
 
-public class CreateActivity extends AppCompatActivity {
+import static android.R.id.message;
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
-    private static final String EXTRA_DATE_AND_TIME = "EXTRA_DATE_AND_TIME";
-    private static final String EXTRA_MESSAGE = "EXTRA_MESSAGE";
-    private static final String EXTRA_DRAWABLE = "EXTRA_DRAWABLE";
+public class CreateActivity extends BaseActivity {
 
-    private TextView dateAndTime;
-    private TextView message;
-    private View coloredBackground;
+    private static final String CREATE_FRAG = "CREATE_FRAG";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create);
 
-        /*I wouldn't normally pass all this Data via Intent, so understand that this is just a quick
-        implementation to get things working for the Demo. I'd normally pass just a Unique id as an
-        extra, and then retrieve the appropriate Data from a Service.*/
-        Intent i = getIntent();
-        String dateAndTimeExtra = i.getStringExtra(EXTRA_DATE_AND_TIME);
-        String messageExtra = i.getStringExtra(EXTRA_MESSAGE);
-        int drawableResourceExtra = i.getIntExtra(EXTRA_DRAWABLE, 0);
 
-        dateAndTime = (TextView) findViewById(R.id.lbl_date_and_time_header);
-        dateAndTime.setText(dateAndTimeExtra);
+        FragmentManager manager = getSupportFragmentManager();
 
-        message = (TextView) findViewById(R.id.lbl_message_body);
-        message.setText(messageExtra);
+        CreateFragment fragment = (CreateFragment) manager.findFragmentByTag(CREATE_FRAG);
 
-        coloredBackground = findViewById(R.id.imv_colored_background);
-        coloredBackground.setBackgroundResource(
-                drawableResourceExtra
+        if (fragment == null) {
+            fragment = CreateFragment.newInstance();
+        }
+
+        addFragmentToActivity(manager,
+                fragment,
+                R.id.root_activity_create,
+                CREATE_FRAG
         );
-
-
 
     }
 }

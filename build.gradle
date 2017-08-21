@@ -6,9 +6,6 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
@@ -31,8 +28,12 @@ task clean(type: Delete) {
 
 ext {
     //android
+    picassoVersion = '2.5.2'
+    circleImageViewVersion = '2.1.0'
     supportLibraryVersion = '25.3.1'
     constraintLayoutVersion = '1.0.2'
     archLifecycleVersion = '1.0.0-alpha5'
+    roomLifecycleVersion = '1.0.0-alpha5'
     viewPagerIndicatorVersion = '2.4.1'
+    daggerVersion = '2.11'
 }

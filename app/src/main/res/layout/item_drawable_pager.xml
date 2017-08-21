@@ -1,4 +1,4 @@
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ /**
   ~  * Copyright (C) 2017 Ryan Kay Open Source Project
   ~  *
@@ -16,18 +16,10 @@
   ~  */
   -->
 
-<resources>
-    <string name="app_name">RoomDemo</string>
-    <string name="action_delete_item">Item Deleted</string>
-    <string name="action_undo">UNDO?</string>
-
-    <!-- used as tags for shared element transitions -->
-    <string name="transition_drawable">drawable</string>
-    <string name="transition_message">message</string>
-    <string name="transition_time_and_date">date</string>
-    <string name="title_toolbar">List Activity</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="error_no_extra_found">Error Retrieving Item Detail</string>
-</resources>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imv_pager_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    tools:src="@drawable/red_drawable" />

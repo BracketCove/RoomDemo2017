@@ -16,11 +16,14 @@
  *
  */
 
-package roomdemo.wiseass.com.roomdemo.detail;
+package roomdemo.wiseass.com.roomdemo.dependencyinjection;
 
 /**
- * Created by R_KAY on 7/27/2017.
+ *  This class provides a means for injecting a Fake DataSource for Testing purposes.
+ * Created by R_KAY on 7/31/2017.
  */
 
-public class DetailPresenter {
+public class DataSourceProvider {
+
+
 }
