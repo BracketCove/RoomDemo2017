@@ -25,7 +25,7 @@ I'm happy to say that my experience with Room has been far different. The docume
 
 
 ## About Me
-I'm an Android Dev living in Victoria BC Canada. I'm a major Nerd, and rambling about Software is quite therapeutic for me, to the extent that I have a [Youtube Channel](https://www.youtube.com/user/gosuddr93) mostly dedicated to that. I also do a Weekly Live Android Developer Q&A Series most Sundays at 8:00AM PDT (GMT -7). You can watch that at the aforementioned time [here](https://www.youtube.com/c/wiseAss/live).
+I'm an Android Dev living in Victoria BC Canada. I'm a major Nerd, and rambling about Software is quite therapeutic for me, to the extent that I have a [Youtube Channel](https://www.youtube.com/user/gosuddr93) mostly dedicated to that. I also do a Weekly Live Android Developer Q&A Series most Sundays at 9:00AM PDT (GMT -7). You can watch that at the aforementioned time [here](https://www.youtube.com/c/wiseAss/live).
 
 **Please Read**
 I don't release this stuff for free because I don't like money. Actually, I could use all the help I can get to improve my Equipment, Production Quality, Content, and pay my living expenses. If my content is worth even the average fancy Hipster Coffee to you, then please Consider sending me a Fiver once on Patreon. 
