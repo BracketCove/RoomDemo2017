@@ -19,13 +19,16 @@ There's plenty of other features, but in a nutshell, it's basically a way to bui
 
 ## Features
 
-**List - Display Data in a RecyclerView, w/ Swipe to Delete**
-<img src="list.png" alt="" width="270" height="480"/>
+### List - Display Data in a RecyclerView, w/ Swipe to Delete
 
-**Create - Create a new Item by selecting a Color, and typing a Message**
+<img src="List.png" alt="" width="270" height="480"/>
+
+### Create - Create a new Item by selecting a Color, and typing a Message
+
 <img src="create.png" alt="" width="270" height="480"/>
 
-**Detail - View an Item in Detail**
+### Detail - View an Item in Detail
+
 <img src="detail.png" alt="" width="270" height="480"/>
 
 ## Model-View-ViewModel Architecture
@@ -52,6 +55,7 @@ Model - Responsible for:
 **Note:** This part of the App should not have any knowledge of the View, nor should it have direct knowledge of the VMs which use it. 
 
 **Rough Diagram:**
+
 <img src="mvvm_aac.jpg" alt="" width="540" height="960"/>
 
 
