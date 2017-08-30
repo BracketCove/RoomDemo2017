@@ -50,6 +50,5 @@ public interface ApplicationComponent {
     void inject(DetailFragment detailFragment);
 
     Application application();
-    RoomDemoApplication roomDemoApplication();
 
 }

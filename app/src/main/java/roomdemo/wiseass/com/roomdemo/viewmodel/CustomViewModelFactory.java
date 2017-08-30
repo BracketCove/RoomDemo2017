@@ -36,6 +36,7 @@ import roomdemo.wiseass.com.roomdemo.data.ListItemRepository;
 public class CustomViewModelFactory implements ViewModelProvider.Factory {
     private final ListItemRepository repository;
 
+    @Inject
     public CustomViewModelFactory(ListItemRepository repository) {
         this.repository = repository;
     }

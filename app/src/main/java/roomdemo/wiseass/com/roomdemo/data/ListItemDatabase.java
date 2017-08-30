@@ -38,20 +38,6 @@ import android.content.Context;
 @Database(entities = {ListItem.class}, version = 1)
 public abstract class ListItemDatabase extends RoomDatabase {
 
-    private static ListItemDatabase INSTANCE;
-
     public abstract ListItemDao listItemDao();
 
-    public static ListItemDatabase getInMemoryDatabase(Context context) {
-        if (INSTANCE == null) {
-            INSTANCE =
-                    Room.databaseBuilder(
-                            context.getApplicationContext(),
-                            ListItemDatabase.class,
-                            "ListItemDatbase.db"
-                    )
-                            .build();
-        }
-        return INSTANCE;
-    }
 }

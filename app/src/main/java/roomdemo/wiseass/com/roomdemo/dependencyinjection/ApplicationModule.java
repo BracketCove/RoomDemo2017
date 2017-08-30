@@ -47,7 +47,6 @@ public class ApplicationModule {
         this.application = application;
     }
 
-    //may need to add a scope here?
     @Provides
     RoomDemoApplication provideRoomDemoApplication(){
         return application;

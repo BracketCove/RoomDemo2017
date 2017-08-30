@@ -22,22 +22,6 @@ android {
         }
     }
 
-    productFlavors {
-        prod {
-
-        }
-        mock {
-            applicationIdSuffix '.mock'
-        }
-    }
-
-    android.variantFilter { variant ->
-        if (variant.buildType.name.equals('release')
-                && variant.getFlavors().get(0).name.equals('mock')) {
-            variant.setIgnore(true);
-        }
-    }
-
     testOptions.unitTests.all {
         testLogging {
             events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'

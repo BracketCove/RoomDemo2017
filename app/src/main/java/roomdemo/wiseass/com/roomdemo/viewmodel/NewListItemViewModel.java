@@ -37,7 +37,6 @@ public class NewListItemViewModel extends ViewModel {
 
     private ListItemRepository repository;
 
-    @Inject
     NewListItemViewModel(ListItemRepository repository) {
         this.repository = repository;
     }

@@ -126,3 +126,22 @@ public class DetailFragment extends LifecycleFragment {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

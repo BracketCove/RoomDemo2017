@@ -18,41 +18,10 @@
 
 package roomdemo.wiseass.com.roomdemo.list;
 
-import android.app.ActivityOptions;
-import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.BaseTransientBottomBar;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.support.v7.widget.helper.ItemTouchHelper;
-import android.transition.Fade;
-import android.util.Pair;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
-import java.util.List;
-
-import javax.inject.Inject;
-
-import dagger.android.AndroidInjector;
-import dagger.android.DispatchingAndroidInjector;
-import dagger.android.support.HasSupportFragmentInjector;
 import roomdemo.wiseass.com.roomdemo.R;
-import roomdemo.wiseass.com.roomdemo.data.ListItem;
-import roomdemo.wiseass.com.roomdemo.detail.DetailActivity;
-import roomdemo.wiseass.com.roomdemo.util.ActivityUtils;
 import roomdemo.wiseass.com.roomdemo.util.BaseActivity;
 
 
