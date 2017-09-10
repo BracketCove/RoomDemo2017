@@ -21,17 +21,10 @@ package roomdemo.wiseass.com.roomdemo.detail;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import roomdemo.wiseass.com.roomdemo.R;
-import roomdemo.wiseass.com.roomdemo.list.ListFragment;
 import roomdemo.wiseass.com.roomdemo.util.BaseActivity;
-
-import static android.R.id.message;
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class DetailActivity extends BaseActivity {
 

@@ -169,11 +169,11 @@ public class ListFragment extends LifecycleFragment {
 
             ActivityOptions options = ActivityOptions
                     .makeSceneTransitionAnimation(container,
-                            new Pair<View, String>(viewRoot.findViewById(R.id.imv_list_item_circle),
+                            new Pair<>(viewRoot.findViewById(R.id.imv_list_item_circle),
                                     getString(R.string.transition_drawable)),
-                            new Pair<View, String>(viewRoot.findViewById(R.id.lbl_message),
+                            new Pair<>(viewRoot.findViewById(R.id.lbl_message),
                                     getString(R.string.transition_message)),
-                            new Pair<View, String>(viewRoot.findViewById(R.id.lbl_date_and_time),
+                            new Pair<>(viewRoot.findViewById(R.id.lbl_date_and_time),
                                     getString(R.string.transition_time_and_date)));
 
             startActivity(i, options.toBundle());

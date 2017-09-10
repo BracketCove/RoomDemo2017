@@ -21,10 +21,7 @@ package roomdemo.wiseass.com.roomdemo.viewmodel;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 
-import java.util.Map;
-
 import javax.inject.Inject;
-import javax.inject.Provider;
 import javax.inject.Singleton;
 
 import roomdemo.wiseass.com.roomdemo.data.ListItemRepository;
@@ -44,13 +41,13 @@ public class CustomViewModelFactory implements ViewModelProvider.Factory {
     @Override
     public <T extends ViewModel> T create(Class<T> modelClass) {
         if (modelClass.isAssignableFrom(ListItemCollectionViewModel.class))
-        return (T) new ListItemCollectionViewModel(repository);
+            return (T) new ListItemCollectionViewModel(repository);
 
         else if (modelClass.isAssignableFrom(ListItemViewModel.class))
-        return (T) new ListItemViewModel(repository);
+            return (T) new ListItemViewModel(repository);
 
         else if (modelClass.isAssignableFrom(NewListItemViewModel.class))
-        return (T) new NewListItemViewModel(repository);
+            return (T) new NewListItemViewModel(repository);
 
         else {
             throw new IllegalArgumentException("ViewModel Not Found");

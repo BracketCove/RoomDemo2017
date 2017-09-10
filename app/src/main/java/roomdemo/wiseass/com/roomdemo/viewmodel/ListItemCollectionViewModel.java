@@ -24,8 +24,6 @@ import android.os.AsyncTask;
 
 import java.util.List;
 
-import javax.inject.Inject;
-
 import roomdemo.wiseass.com.roomdemo.data.ListItem;
 import roomdemo.wiseass.com.roomdemo.data.ListItemRepository;
 

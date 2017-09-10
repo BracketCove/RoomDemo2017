@@ -201,7 +201,6 @@ public class CreateFragment extends Fragment {
     }
 
     public String getDate() {
-        Calendar calendar = new GregorianCalendar();
 
         Date currentDate = Calendar.getInstance().getTime();
 

@@ -90,9 +90,12 @@ public class DetailFragment extends LifecycleFragment {
         listItemViewModel.getListItemById(itemId).observe(this, new Observer<ListItem>() {
             @Override
             public void onChanged(@Nullable ListItem listItem) {
-                dateAndTime.setText(listItem.getItemId());
-                message.setText(listItem.getMessage());
-                coloredBackground.setImageResource(listItem.getColorResource());
+                if (listItem != null) {
+                    dateAndTime.setText(listItem.getItemId());
+                    message.setText(listItem.getMessage());
+                    coloredBackground.setImageResource(listItem.getColorResource());
+                }
+
             }
         });
 
