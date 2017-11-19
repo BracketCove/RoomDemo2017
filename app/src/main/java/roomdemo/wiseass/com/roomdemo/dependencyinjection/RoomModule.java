@@ -21,7 +21,6 @@ package roomdemo.wiseass.com.roomdemo.dependencyinjection;
 import android.app.Application;
 import android.arch.lifecycle.ViewModelProvider;
 import android.arch.persistence.room.Room;
-import android.arch.persistence.room.RoomDatabase;
 
 import javax.inject.Singleton;
 

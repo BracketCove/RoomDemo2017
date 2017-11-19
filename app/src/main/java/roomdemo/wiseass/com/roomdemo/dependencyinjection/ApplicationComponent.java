@@ -19,21 +19,13 @@
 package roomdemo.wiseass.com.roomdemo.dependencyinjection;
 
 import android.app.Application;
-import android.arch.lifecycle.ViewModelProvider;
 
 import javax.inject.Singleton;
 
-import dagger.BindsInstance;
 import dagger.Component;
-import dagger.android.AndroidInjectionModule;
-import roomdemo.wiseass.com.roomdemo.RoomDemoApplication;
 import roomdemo.wiseass.com.roomdemo.create.CreateFragment;
-import roomdemo.wiseass.com.roomdemo.data.ListItemDao;
-import roomdemo.wiseass.com.roomdemo.data.ListItemDatabase;
-import roomdemo.wiseass.com.roomdemo.data.ListItemRepository;
 import roomdemo.wiseass.com.roomdemo.detail.DetailFragment;
 import roomdemo.wiseass.com.roomdemo.list.ListFragment;
-import roomdemo.wiseass.com.roomdemo.viewmodel.CustomViewModelFactory;
 
 /**
  * Annotated as a Singelton since we don't want to have multiple instances of a Single Database,
