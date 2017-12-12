@@ -3,19 +3,17 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.0.1'
     }
 }
 
 allprojects {
     repositories {
         jcenter()
-
-        maven {
-            url "https://maven.google.com"
-        }
+        google()
 
         //VPI
         maven { url "https://jitpack.io" }
@@ -27,13 +25,23 @@ task clean(type: Delete) {
 }
 
 ext {
-    //android
+    //build
+    minSdkVersion = 16
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.2'
+
+    //3rd party
     picassoVersion = '2.5.2'
     circleImageViewVersion = '2.1.0'
-    supportLibraryVersion = '25.3.1'
-    constraintLayoutVersion = '1.0.2'
-    archLifecycleVersion = '1.0.0-alpha5'
-    roomLifecycleVersion = '1.0.0-alpha5'
     viewPagerIndicatorVersion = '2.4.1'
-    daggerVersion = '2.11'
+    daggerVersion = '2.13'
+
+    //android
+    supportLibraryVersion = '26.1.0'
+    constraintLayoutVersion = '1.0.2'
+    archLifecycleVersion = '1.0.3'
+    archLifecycleCompilerVersion = '1.0.0'
+    archLifecycleExtensionsVersion = '1.0.0'
+    roomVersion = '1.0.0'
+
 }

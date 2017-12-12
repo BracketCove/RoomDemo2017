@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "roomdemo.wiseass.com.roomdemo"
-        minSdkVersion 16
-        targetSdkVersion 25
+        minSdkVersion "$rootProject.minSdkVersion"
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -40,34 +40,26 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
-/*
-    https://github.com/hdodenhof/CircleImageView
-     */
+    /*
+        https://github.com/hdodenhof/CircleImageView
+         */
     compile "de.hdodenhof:circleimageview:$rootProject.circleImageViewVersion"
-
     //D2
     compile "com.google.dagger:dagger-android-support:$rootProject.daggerVersion"
     compile "com.google.dagger:dagger:$rootProject.daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
-
-
     //instead of check Project level build.gradle for version values
     compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
     compile "com.android.support:design:$rootProject.supportLibraryVersion"
     compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
-
-    annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleCompilerVersion"
     compile "android.arch.lifecycle:runtime:$rootProject.archLifecycleVersion"
-    compile "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
-
-    compile "android.arch.persistence.room:runtime:$rootProject.roomLifecycleVersion"
-    annotationProcessor "android.arch.persistence.room:compiler:$rootProject.roomLifecycleVersion"
-
+    compile "android.arch.lifecycle:extensions:$rootProject.archLifecycleExtensionsVersion"
+    compile "android.arch.persistence.room:runtime:$rootProject.roomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$rootProject.roomVersion"
     compile "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
     compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
     compile "com.github.JakeWharton:ViewPagerIndicator:$rootProject.viewPagerIndicatorVersion"
-
     testCompile 'org.mockito:mockito-core:2.8.9'
     testCompile 'junit:junit:4.12'
 }

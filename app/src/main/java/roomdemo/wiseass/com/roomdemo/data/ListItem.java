@@ -20,6 +20,7 @@ package roomdemo.wiseass.com.roomdemo.data;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 /**
  * Room will use the Class name a sa default table name.
@@ -32,6 +33,7 @@ public class ListItem {
     //itemId is simply a value based on the current date, to the second.
     //Most importantly, it should always be a unique value, however you choose to determine it.
     @PrimaryKey
+    @NonNull
     private String itemId;
     private String message;
     private int colorResource;
