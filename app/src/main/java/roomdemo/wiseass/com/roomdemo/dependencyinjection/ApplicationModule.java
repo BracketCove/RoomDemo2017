@@ -19,21 +19,10 @@
 package roomdemo.wiseass.com.roomdemo.dependencyinjection;
 
 import android.app.Application;
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProvider;
-import android.arch.persistence.room.Room;
-import android.arch.persistence.room.RoomDatabase;
-import android.content.Context;
-
-import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
 import roomdemo.wiseass.com.roomdemo.RoomDemoApplication;
-import roomdemo.wiseass.com.roomdemo.data.ListItemDao;
-import roomdemo.wiseass.com.roomdemo.data.ListItemDatabase;
-import roomdemo.wiseass.com.roomdemo.data.ListItemRepository;
-import roomdemo.wiseass.com.roomdemo.viewmodel.CustomViewModelFactory;
 
 /**
  *

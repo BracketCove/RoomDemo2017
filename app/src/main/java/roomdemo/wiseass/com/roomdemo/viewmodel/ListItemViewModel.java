@@ -20,9 +20,6 @@ package roomdemo.wiseass.com.roomdemo.viewmodel;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.ViewModel;
-import android.os.AsyncTask;
-
-import javax.inject.Inject;
 
 import roomdemo.wiseass.com.roomdemo.data.ListItem;
 import roomdemo.wiseass.com.roomdemo.data.ListItemRepository;
