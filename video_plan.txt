@@ -1,6 +1,0 @@
-1. Add imports. Include
-maven {
-            url "https://maven.google.com"
-        }
-
-2. Rebuild Package Structure
