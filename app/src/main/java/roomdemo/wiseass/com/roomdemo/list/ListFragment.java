@@ -21,7 +21,6 @@ package roomdemo.wiseass.com.roomdemo.list;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
-import android.arch.lifecycle.LifecycleFragment;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
@@ -31,6 +30,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -64,7 +64,7 @@ import roomdemo.wiseass.com.roomdemo.viewmodel.ListItemCollectionViewModel;
  * <p>
  * You have been told.
  */
-public class ListFragment extends LifecycleFragment {
+public class ListFragment extends Fragment {
 
     private static final String EXTRA_ITEM_ID = "EXTRA_ITEM_ID";
 
