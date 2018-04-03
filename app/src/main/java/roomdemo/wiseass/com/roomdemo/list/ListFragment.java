@@ -109,7 +109,7 @@ public class ListFragment extends LifecycleFragment {
         listItemCollectionViewModel.getListItems().observe(this, new Observer<List<ListItem>>() {
             @Override
             public void onChanged(@Nullable List<ListItem> listItems) {
-                if (ListFragment.this.listOfData == null) {
+                if (listOfData == null) {
                     setListData(listItems);
                 }
             }
