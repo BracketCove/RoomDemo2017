@@ -57,13 +57,7 @@ import roomdemo.wiseass.com.roomdemo.data.ListItem;
 import roomdemo.wiseass.com.roomdemo.detail.DetailActivity;
 import roomdemo.wiseass.com.roomdemo.viewmodel.ListItemCollectionViewModel;
 
-/**
- * Please Note!!!
- * LifeCycle Fragment is a temporary class, and likely by the time you watch this, the standard
- * Fragment implementation will suffice. Architecture Components isn't finalized.
- * <p>
- * You have been told.
- */
+
 public class ListFragment extends Fragment {
 
     private static final String EXTRA_ITEM_ID = "EXTRA_ITEM_ID";
