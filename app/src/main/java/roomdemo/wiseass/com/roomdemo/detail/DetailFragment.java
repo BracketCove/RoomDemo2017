@@ -18,13 +18,13 @@
 
 package roomdemo.wiseass.com.roomdemo.detail;
 
-import android.arch.lifecycle.LifecycleFragment;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +39,7 @@ import roomdemo.wiseass.com.roomdemo.data.ListItem;
 import roomdemo.wiseass.com.roomdemo.viewmodel.ListItemViewModel;
 
 
-public class DetailFragment extends LifecycleFragment {
+public class DetailFragment extends Fragment {
 
     private static final String EXTRA_ITEM_ID = "EXTRA_ITEM_ID";
 
