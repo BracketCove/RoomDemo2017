@@ -1,15 +1,23 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "roomdemo.wiseass.com.roomdemo"
         minSdkVersion "$rootProject.minSdkVersion"
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+
     }
     buildTypes {
         release {
@@ -20,6 +28,10 @@ android {
         debug {
             minifyEnabled false
         }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "12g"
     }
 
     testOptions.unitTests.all {
@@ -36,30 +48,30 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     /*
         https://github.com/hdodenhof/CircleImageView
          */
-    compile "de.hdodenhof:circleimageview:$rootProject.circleImageViewVersion"
+    implementation "de.hdodenhof:circleimageview:$rootProject.circleImageViewVersion"
     //D2
-    compile "com.google.dagger:dagger-android-support:$rootProject.daggerVersion"
-    compile "com.google.dagger:dagger:$rootProject.daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.daggerVersion"
+    implementation "com.google.dagger:dagger:$rootProject.daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
     //instead of check Project level build.gradle for version values
-    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    compile "com.android.support:design:$rootProject.supportLibraryVersion"
-    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
     annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleCompilerVersion"
-    compile "android.arch.lifecycle:runtime:$rootProject.archLifecycleVersion"
-    compile "android.arch.lifecycle:extensions:$rootProject.archLifecycleExtensionsVersion"
-    compile "android.arch.persistence.room:runtime:$rootProject.roomVersion"
+    implementation "android.arch.lifecycle:runtime:$rootProject.archLifecycleVersion"
+    implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleExtensionsVersion"
+    implementation "android.arch.persistence.room:runtime:$rootProject.roomVersion"
     annotationProcessor "android.arch.persistence.room:compiler:$rootProject.roomVersion"
-    compile "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
-    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
-    compile "com.github.JakeWharton:ViewPagerIndicator:$rootProject.viewPagerIndicatorVersion"
-    testCompile 'org.mockito:mockito-core:2.8.9'
-    testCompile 'junit:junit:4.12'
+    implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
+    implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    implementation "com.github.JakeWharton:ViewPagerIndicator:$rootProject.viewPagerIndicatorVersion"
+    testImplementation 'org.mockito:mockito-core:2.8.9'
+    testImplementation 'junit:junit:4.12'
 }

@@ -6,7 +6,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.1.4'
     }
 }
 
@@ -27,8 +27,8 @@ task clean(type: Delete) {
 ext {
     //build
     minSdkVersion = 16
-    compileSdkVersion = 26
-    buildToolsVersion = '26.0.2'
+    compileSdkVersion = 27
+    buildToolsVersion = '27.0.3'
 
     //3rd party
     picassoVersion = '2.5.2'
@@ -37,11 +37,11 @@ ext {
     daggerVersion = '2.13'
 
     //android
-    supportLibraryVersion = '26.1.0'
-    constraintLayoutVersion = '1.0.2'
+    supportLibraryVersion = '27.1.1'
+    constraintLayoutVersion = '1.1.2'
     archLifecycleVersion = '1.0.3'
-    archLifecycleCompilerVersion = '1.0.0'
-    archLifecycleExtensionsVersion = '1.0.0'
-    roomVersion = '1.0.0'
+    archLifecycleCompilerVersion = '1.1.1'
+    archLifecycleExtensionsVersion = '1.1.1'
+    roomVersion = '1.1.1'
 
 }
